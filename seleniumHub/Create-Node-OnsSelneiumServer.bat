@@ -1,0 +1,1 @@
+java -Dwebdriver.gecko.driver=geckodriver.exe -jar selenium-server-standalone-3.141.5.jar -role node -hub http://localhost:4444/grid/register -browser browserName=chrome,maxInstances=2 -maxSession 2

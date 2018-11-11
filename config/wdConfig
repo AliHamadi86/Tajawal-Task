@@ -1,0 +1,8 @@
+browser=chrome
+urlHost=http://localhost:4444/wd/hub
+pageLoadTimeOut=90
+ajaxTimeOut=60
+elementTimeOut=10
+elementNegativeTimeOut=3
+sikuliTimeOut=25
+sikuliNegativeTimeOut=3
