@@ -95,34 +95,6 @@ public class EventListener implements WebDriverEventListener {
 
 	@Override
 	public void beforeFindBy(By arg0, WebElement arg1, WebDriver arg2) {
-		String awsomeBtn = "//button[@id='congrats_message']";
-		String bonusBtn = "//button[@id='bonus_received_message']";
-		String onBoardBtn = "//button[starts-with(@class,'joyride-tooltip__close')]";
-		String closeCjmNotificationBtn = "//button[starts-with(@class,'tt-btn tt-desktop-notification__button notification-message-action-5')]";
-		String closeCjmPopupBtn = "//div[starts-with(@class,'tt-bo-message__btn-container bo-message-action-5')]";
-		String marginCallOkBtn = "//div[contains(text(),'The amount of securities')]/../../button[@id='notification_message_ok_button']";
-		String tc_accept_btn="//button[@id='tc_accept_button']";
-		// String rateChangeOkBtn = "//div[contains(text(),'The position was not opened
-		// due to rate changes.')]/../../button[@id='notification_message_ok_button']";
-		for (int i = 0; i < 10; i++) {
-			if (isElementPresent(awsomeBtn, 0, arg2)) {
-				arg2.findElement(By.xpath(awsomeBtn)).click();
-			} else if (isElementPresent(bonusBtn, 0, arg2)) {
-				arg2.findElement(By.xpath(bonusBtn)).click();
-			} else if (isElementPresent(onBoardBtn, 0, arg2)) {
-				arg2.findElement(By.xpath(onBoardBtn)).click();
-			} else if (isElementPresent(closeCjmNotificationBtn, 0, arg2)) {
-				arg2.findElement(By.xpath(closeCjmNotificationBtn)).click();
-			} else if (isElementPresent(closeCjmPopupBtn, 0, arg2)) {
-				arg2.findElement(By.xpath(closeCjmPopupBtn)).click();
-			} else if (isElementPresent(marginCallOkBtn, 0, arg2)) {
-				arg2.findElement(By.xpath(marginCallOkBtn)).click();
-			}  else if (isElementPresent(tc_accept_btn, 0, arg2)) {
-				 arg2.findElement(By.xpath(tc_accept_btn)).click();}
-			else {
-				break;
-			}
-		}
 
 	}
 
@@ -160,19 +132,6 @@ public class EventListener implements WebDriverEventListener {
 	public void onException(Throwable arg0, WebDriver arg1) {
 		// TODO Auto-generated method stub
 
-	}
-
-	public boolean isElementPresent(String xpathElement, int timeOut, WebDriver driver) {
-
-		boolean found = true;
-		try {
-
-			WebDriverWait wait = new WebDriverWait(driver, timeOut);
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathElement)));
-		} catch (Exception e) {
-			found = false;
-		}
-		return found;
 	}
 
 	@Override
