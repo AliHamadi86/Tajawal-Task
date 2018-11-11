@@ -1,0 +1,20 @@
+-- the project structure is as following:
+src: that contaisn the buisness logic files(the main methods of and actions of Tajawal)
+core: contains the selenium frameworkd and some utilities.
+tests: that should contains all of the tests.
+
+config: contains two files: 
+ - wdConfig(web driver config): contains the selenium configuration parameters.
+ - onfig: contains all of the parameters of tajawal.
+ 
+seleniumhub: contains the selenium hub server and firefox and chrome exe files.
+
+test-output: contains the reports of the actual tests.
+-------------------------------------------------------------
+how to run the tests:
+navigate to the selenium hub folder and run the following files:
+1. start-seleniumHub-server.bat
+2. Create-Node-OneSeleniumServer.bat
+4. navigate to the test/flight directory and right click on the first test and run it via testng.
+
+Note: the project can be extended by adding test suites and ant build to run via the cmd or via a cl.
